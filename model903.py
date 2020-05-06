@@ -3,7 +3,6 @@ import numpy as np
 from layerNormedGRU import layerNormedGRU
 
 class model:
-
     def __init__(self, num_class, topk_paths = 10):
         self.xs = tf.placeholder(tf.float32, [None, 1000, 161])
         self.ys = tf.sparse_placeholder(tf.int32)
@@ -87,3 +86,4 @@ class model:
     def predict(self, sess, xs):
         prediction = sess.run(self.prediction, feed_dict = {self.isTrain: False, self.seq_len: np.ones(xs.shape[0])*334, self.xs: xs})
         return prediction
+

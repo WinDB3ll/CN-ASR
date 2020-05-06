@@ -3,7 +3,6 @@ import numpy as np
 from layerNormedGRU import layerNormedGRU
 
 class model:
-
     def __init__(self, num_class, topk_paths = 10):
         self.xs = tf.placeholder(tf.float32, [None, 1000, 161])
         self.ys = tf.sparse_placeholder(tf.int32)

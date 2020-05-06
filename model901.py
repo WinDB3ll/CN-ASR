@@ -2,6 +2,7 @@ import tensorflow as tf
 import numpy as np
 from layerNormedGRU import layerNormedGRU
 
+
 class model:
 
     def __init__(self, num_class, topk_paths = 10):
